@@ -1,0 +1,22 @@
+
+Id
+</br>
+Date Time
+</br>
+Status
+</br>
+Temperature
+
+<p>||</p>
+{% for item in apppompa %}
+
+
+{{item.Id}}
+</br>
+{{ item.datetime }}
+</br>
+{{ item.status }}
+</br>
+{{ item.temperature }}
+<p>||</p>
+{% endfor %}

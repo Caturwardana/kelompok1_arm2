@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+</html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>{% block title %} {% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/static/css/style.css" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Viga" rel="stylesheet" />
+  
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+  
+        <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function(){
+          
+          window.addEventListener('scroll', function() {
+              
+            if (window.scrollY > 200) {
+              document.getElementById('navbar_top').classList.add('fixed-top');
+              // add padding top to show content behind navbar
+              navbar_height = document.querySelector('.navbar').offsetHeight;
+              document.body.style.paddingTop = navbar_height + 'px';
+            } else {
+              document.getElementById('navbar_top').classList.remove('fixed-top');
+              // remove padding top from body
+              document.body.style.paddingTop = '0';
+            } 
+          });
+        }); 
+        // DOMContentLoaded  end
+        </script>
+
+        <style type="text/css">
+          .fixed-top {
+              top: -40px;
+              transform: translateY(40px);
+              transition: transform .3s;
+          }
+        </style>
+  </head>
+  <body>
+
+    <!-- ============= COMPONENT ============== -->
+    <nav id="navbar_top" class="navbar navbar-expand-lg navbar-dark" style="background-color: #222831">
+      <div class="container">
+            <a class="navbar-brand" href="#">Kelompok 1 - ARM 2</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+          <div class="collapse navbar-collapse" id="main_nav">
+
+              <ul class="navbar-nav ms-auto">
+                <li>
+                <a class="nav-item nav-link active text-white tombol" href="/homemanagement">Home <span class="sr-only">(current)</span></a>
+                </li>
+                
+                {% if session['name'] %}
+                <li>
+                  <a  class="nav-item nav-link text-white tombol" href="/dashboardmanagement">Dashboard</a>
+                </li>
+                <li>
+                <a class="nav-item nav-link text-white tombol" href="/logout">Logout</a>
+                </li>
+                <li>
+                  <a class="nav-item nav-link btn btn-primary text-white tombol" href="#">Contact Us</a>
+                </li>
+                
+                {% else %}
+                <li>
+                <a class="nav-item nav-link text-white tombol" href="/account_login">Login</a>
+                </li>
+                <li>
+                <a class="nav-item nav-link text-white tombolS" href="/account_register">Register</a>
+                </li>
+                {% endif %}
+              </ul>
+    
+          </div> <!-- navbar-collapse.// -->
+      </div> <!-- container-fluid.// -->
+    </nav>
+                <!-- ============= COMPONENT NAVBAR END // ============== -->
+
+   {% block content %} {% endblock %}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <style>
+    body {
+      background-color: #f0ebcc;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%2394b8b6' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%232a2c2f' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23adc8c2' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%237e858d' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23e7f3ef' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%232f373f' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23c7e1d2' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%234d5d68' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23616a63' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%2348626f' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23b9c4b6' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23667174' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+      background-attachment: fixed;
+      background-size: cover;
+      }
+  </style>
+  </body>
+  
+  <!-- Testimonial -->
+  <section class="testimonial">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 justify-content-center d-flex">
+        <img src="/static/img/img2.png" alt="Testimonial 2" class="img-main" />
+      </div>
+    </div>
+    <div class="row justify-content-center info-text">
+      <div class="col-lg text-center">
+        <h5>Industrial Control</h5>
+        <p>Realtime Data View</p>
+      </div>
+    </div>
+  </section>
+  <!-- end Testimonial -->
+</html>

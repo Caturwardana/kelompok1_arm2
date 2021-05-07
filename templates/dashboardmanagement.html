@@ -1,0 +1,145 @@
+{% extends 'layoutmanagement.html' %} {% block title %} Dashboard Admin {% endblock %} {% block content %}
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="static/js/script1.js"></script>
+
+<h5 class="judul-user">.</h5>
+<!-- Tombol aksi -->
+<div class="row justify-content-center">
+  <div class="col-lg-4 info-panel-info">
+    <div class="col-lg text-center">
+      <h5>Tombol Aksi :</h5>
+      <h5>‎</h5>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col text-center">
+        <h5 class="judul-user">.</h5>
+        <a href="/clearlog" class="btn btn-danger btn-xs" onclick="return confirm('Hapus log?')">Clear Log !</a>
+      </div>
+      <div class="col text-center">
+        <h5>Tombol Aksi Hanya tersedia di Account Administrator</h5>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Tombol aksi -->
+
+<div class="container">
+  <div class="row">
+    <div class="">
+      {% block body %}
+      <h1 class="judul-user">.</h1>
+      <div class="row justify-content-center">
+        <div class="col wadah-slur">
+          <div class="col-lg text-center">
+            <h1>Data Table</h1>
+            <h5>Data kondisi Motor, HVAC, dan Pompa</h5>
+            <div class="col-lg text-center">
+              <p>"Data diambil secara realtime"</p>
+            </div>
+            <h5 class="judul-user">.</h5>
+          </div>
+
+          <div class="row" style="max-height: 1000px">
+            <div class="col-sm text-center">
+              <div class="col-lg text-center">
+                <h5>Motor</h5>
+              </div>
+              <table class="table table-bordered">
+                <thead>
+                  <tr class="bg-info">
+                    <td>Id</td>
+
+                    <td>Waktu</td>
+                    <td>Status</td>
+                    <td>Temperature</td>
+                  </tr>
+                </thead>
+
+                <tbody id="mymotor">
+                  <tr>
+                    <td>{{ "Loading Please wait !" }}</td>
+
+                    <td>{{ "Loading Please wait !" }}</td>
+                    <td>{{ "Loading Please wait !" }}</td>
+                    <td>{{ "Loading Please wait !" }}</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3">Belum ada data terbaca</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="col-lg text-center">
+              <div class="col-lg text-center">
+                <h5>HVAC</h5>
+              </div>
+              <table class="table table-bordered">
+                <thead>
+                  <tr class="bg-warning">
+                    <td>Id</td>
+
+                    <td>Waktu</td>
+                    <td>Status</td>
+                    <td>Temperature</td>
+                  </tr>
+                </thead>
+
+                <tbody id="myhvac">
+                  <tr>
+                    <td>{{ "Loading Please wait !" }}</td>
+
+                    <td>{{ "Loading Please wait !" }}</td>
+                    <td>{{ "Loading Please wait !" }}</td>
+                    <td>{{ "Loading Please wait !" }}</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3">Belum ada data terbaca</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col-lg text-center">
+              <div class="col-lg text-center">
+                <h5>Pompa</h5>
+              </div>
+              <table class="table table-bordered">
+                <thead>
+                  <tr class="bg-primary">
+                    <td>Id</td>
+
+                    <td>Waktu</td>
+                    <td>Status</td>
+                    <td>Temperature</td>
+                  </tr>
+                </thead>
+
+                <tbody id="mypompa">
+                  <tr>
+                    <td>{{ "Loading Please wait !" }}</td>
+
+                    <td>{{ "Loading Please wait !" }}</td>
+                    <td>{{ "Loading Please wait !" }}</td>
+                    <td>{{ "Loading Please wait !" }}</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3">Belum ada data terbaca</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- /.container -->
+
+      {% endblock %}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
