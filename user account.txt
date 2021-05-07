@@ -1,0 +1,17 @@
+login as user management
+
+kelompok1.management@arm2.tik
+kelompok1
+
+========================
+
+login as admin
+
+kelompok1.admin@arm2.tik
+kelompok1
+
+=======================
+
+If need to register
+
+use otp code = kelompok1
