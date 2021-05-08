@@ -1,0 +1,2 @@
+# kelompok1_arm2
+Kontrol jarak jauh berbasis web sebagai media untuk mengontrol industrial equipment di suatu perusahaan pabrik. Untuk mengontrol industrial equipment melalui internet, user perlu membuka web browser dan mengakses IP Server yang terhubung dengan industrial equipment. Setelah masuk mengakses web control ini, pertama-tama user perlu memasukkan userid dan password-nya sebagai keamanan agar tidak sembarangan orang yang dapat mengakses sistem. 
