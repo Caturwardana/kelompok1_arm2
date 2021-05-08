@@ -6,22 +6,13 @@ import bcrypt
 import json
 import random, datetime, time
 
-
-
-
 app = Flask(__name__)
-app.config['SECRET_KEY'] = "^A%DJAJU^JJ123"
-app.config['MYSQL_HOST'] = 'caturwardana.mysql.pythonanywhere-services.com'
-app.config['MYSQL_USER'] = 'caturwardana'
-app.config['MYSQL_PASSWORD'] = 'catur1234'
-app.config['MYSQL_DB'] = 'caturwardana$industrial_control_system'
-app.config['MYSQL_PORT'] = 3306
+app.config['MYSQL_HOST'] = 'localhost'
+app.config['MYSQL_USER'] = 'root'
+app.config['MYSQL_PASSWORD'] = '1111'
+app.config['MYSQL_DB'] = 'industrial_control_system'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 mysql = MySQL(app)
-
-
-
-
 
 
 @app.route('/')
@@ -477,7 +468,7 @@ def apppompa():
     cur.close()
     return render_template('apppompa.html', apppompa=rv)
 
-#if __name__ == '__main__':
-#    app.secret_key = "^A%DJAJU^JJ123"
-#    app.run(debug=True)
-#    #app.run(host='0.0.0.0', debug=True)
+if __name__ == '__main__':
+    app.secret_key = "^A%DJAJU^JJ123"
+    #app.run(debug=True)
+    app.run(host='0.0.0.0', debug=True)
