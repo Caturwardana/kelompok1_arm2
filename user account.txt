@@ -15,3 +15,8 @@ kelompok1
 If need to register
 
 use otp code = kelompok1
+
+
+link github : https://github.com/Caturwardana/kelompok1_arm2
+
+link pythonanywhere : http://caturwardana.pythonanywhere.com/
