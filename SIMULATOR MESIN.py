@@ -79,6 +79,13 @@ def Menu():
     if(choice==5):
         exit()
 
+    lagi=input("\nTry again (Y/y) ? ")
+    if lagi.lower() == "y" :
+        Menu ()
+    else :
+        print("Program has done")
+
+
 Menu()
 
 
